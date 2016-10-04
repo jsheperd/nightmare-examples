@@ -1,3 +1,6 @@
+# 0.3.2 - 2016-10-04
+- Updated solution for uploads.
+
 # 0.3.1 - 2016-05-30
 - Botched publish necessitated unpublishing 0.3.0 and publishing under new version.
 
