@@ -25,7 +25,7 @@ nightmare.goto('http://example.com')
 nightmare.goto('http://example2.com')
     .title()
     .then(function(title){
-        console.log(title
+        console.log(title);
     });
 ```
 The expectation might be:
