@@ -1,3 +1,7 @@
+# 0.3.3 - 2017-01-04
+====================
+- Fixed a couple of typos.
+
 # 0.3.2 - 2016-10-04
 - Updated solution for uploads.
 
