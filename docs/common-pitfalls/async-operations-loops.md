@@ -84,6 +84,26 @@ console.dir(results)
 
 This has the same problems as before: Nightmare is executing multiple queues against the same instance.  The above has a new wrinkle in that there could be an arbitrary nummber of URLs to go to.  The results will likely be empty as none of the Nightmare chains have had time to finish executing.
 
+### Async / await
+
+The new async syntax can be simplify this. The loop waits for each promise to resolve.
+
+```js
+var urls = ['http://example.com', 'http://example2.com', 'http://example3.com'];
+
+var results = []
+
+async function collectTitles(urls){
+  for ( url of urls ) {
+    results.push(await nightmare.goto(url).wait('body').title())
+  }
+  await nightmare.end()
+  console.dir(results)
+}
+
+collectTitles(urls)
+```
+
 ### Vanilla JS
 A variable number of queues can be solved through `Array.reduce`.  Consider:
 
